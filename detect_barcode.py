@@ -5,7 +5,6 @@ import cv2
 import numpy as np
 
 
-# decode barcode image
 def decode(input_image):
     """Decode barcode image
 
@@ -127,11 +126,15 @@ args = vars(ap.parse_args())
 if __name__ == '__main__':
 
     # load the input image with OpenCV
-    image = cv2.imread(args["image"])
+    image_file = args["image"]
+    image = cv2.imread(image_file)
 
-    # Decode barcode
-    decoded = decode(image)
+    if image is not None:
 
-    # Display image with decoded information
-    display(image, decoded)
+        # Decode barcode
+        decoded = decode(image)
 
+        # Display image with decoded information
+        display(image, decoded)
+    else:
+        print("File {} is not valid or not found.".format(image_file))
