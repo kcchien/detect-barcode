@@ -6,13 +6,13 @@ This utility will load an image and try to find if any barcode exists. Then deco
 
 The code were written in python. Please make sure you have correspond environment.
 
-* Python 3
-* OpenCV
-* ZBar library
+- Python 3
+- OpenCV
+- ZBar library
 
 ```bash
 # Install required packages
-pip install python-opencv
+pip install opencv-python
 pip install pyzbar
 ```
 
@@ -23,4 +23,5 @@ python detect_barcode.py -i "<your image path here>"
 ```
 
 ## Contact
+
 Kuang-Cheng, Chien - me@kcchien.com
