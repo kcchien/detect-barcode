@@ -12,6 +12,8 @@ The code were written in python. Please make sure you have correspond environmen
 
 ```bash
 # Install required packages
+sudo apt update
+sudo apt install libzbar-dev
 pip install opencv-python
 pip install pyzbar
 ```
